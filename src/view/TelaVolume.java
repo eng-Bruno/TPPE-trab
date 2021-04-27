@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -98,6 +99,14 @@ public class TelaVolume extends JFrame {
 		btnBotaoVol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// Aqui é verificado se o conteúdo do fieldTempo é uma string ou se esta vazio.
+				if (fieldVol.getText().equals("") || !isNumeric(fieldVol.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else {
+				
 				double valor = Double.parseDouble(fieldVol.getText().toString());/* Essa variavel serve para armazenar o valor do
                 																		 fieldVol (string) em forma de Double  */
 				
@@ -110,6 +119,7 @@ public class TelaVolume extends JFrame {
 				fieldResultadoVol.setVisible(true);// Torna o fieldResultadoVol visível para o usuário.
 				fieldResultadoVol.setText(volume.getVol(comboVol2.getSelectedIndex()));// Exibição do resultado no fieldResultadoVol
 				
+			}
 			}
 		});
 		
@@ -142,4 +152,18 @@ public class TelaVolume extends JFrame {
 		setVisible(true);
 	}
 
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldVol)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
+	}
 }

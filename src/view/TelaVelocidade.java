@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -99,6 +100,14 @@ public class TelaVelocidade extends JFrame {
 		btnBotaoVeloc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// Aqui é verificado se o conteúdo do fieldVel é uma string ou se esta vazio.
+				if (fieldVel.getText().equals("") || !isNumeric(fieldVel.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else {
+				
 				double valor = Double.parseDouble(fieldVel.getText().toString());/* Essa variavel serve para armazenar o valor do
                 																		fieldVel (string) em forma de Double  */
 				
@@ -111,6 +120,7 @@ public class TelaVelocidade extends JFrame {
 				fieldResultadoVel.setText(velocidade.getVelocidade(comboVel2.getSelectedIndex()));/* Exibição do resultado no
 				 																						fieldResultadoVel*/
 				
+			}
 			}
 		});
 		
@@ -145,4 +155,18 @@ public class TelaVelocidade extends JFrame {
 
 	}
 
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldVel)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
+	}
 }

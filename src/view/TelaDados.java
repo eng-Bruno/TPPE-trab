@@ -8,6 +8,7 @@ import java.awt.Font;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -102,6 +103,14 @@ public class TelaDados extends JFrame {
 		btnBotaoDado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// Aqui é verificado se o conteúdo do fieldDado é uma string ou se esta vazio.
+				if (fieldDado.getText().equals("") || !isNumeric(fieldDado.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else {
+				
 				double valor = Double.parseDouble(fieldDado.getText().toString()); /* Essa variavel serve para armazenar o valor do
                 																		 fieldDado (string) em forma de Double  */
 				
@@ -113,6 +122,7 @@ public class TelaDados extends JFrame {
 				fieldResultadoDado.setVisible(true); // Torna o fieldResultadoDado visível para o usuário.
 				fieldResultadoDado.setText(dados.getDados(comboDado2.getSelectedIndex()));//Exibição do resultado no fieldResultadoDado
 				
+			}
 			}
 		});
 		
@@ -147,4 +157,18 @@ public class TelaDados extends JFrame {
 
 	}
 
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldDado)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
+	}
 }

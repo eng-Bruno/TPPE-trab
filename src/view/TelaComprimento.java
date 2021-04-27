@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -108,7 +109,13 @@ public class TelaComprimento extends JFrame {
 		btnBotaoComp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			
+				// Aqui é verificado se o conteúdo do fieldComp é uma string ou se esta vazio.
+				if (fieldComp.getText().equals("") || !isNumeric(fieldComp.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
 				
+				else {
 				double valor = Double.parseDouble(fieldComp.getText()); /* Essa variavel serve para armazenar o valor do
                 																		fieldComp (string) em forma de Double  */
 				
@@ -121,6 +128,7 @@ public class TelaComprimento extends JFrame {
 				 fieldResultadoComp.setVisible(true); // Torna o fieldResultadoComp visível para o usuário.
 			     fieldResultadoComp.setText(comprimento.getComp(comboComp2.getSelectedIndex()));/* Exibição do resultado no 
 			     																					  fieldResultadoComp */
+			}
 			}
 		});
 		// Coordenadas do btnBotaoComp.
@@ -153,5 +161,20 @@ public class TelaComprimento extends JFrame {
 		setLocationRelativeTo(null);
 		setVisible(true);
 		
+	}
+	
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldComp)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
 	}
 }

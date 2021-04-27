@@ -9,6 +9,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -103,6 +104,14 @@ public class TelaPeso extends JFrame {
 		btnBotaoPeso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// Aqui é verificado se o conteúdo do fieldPeso é uma string ou se esta vazio.
+				if (fieldPeso.getText().equals("") || !isNumeric(fieldPeso.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else {
+				
 				double valor = Double.parseDouble(fieldPeso.getText().toString()); /* Essa variavel serve para armazenar o valor do
                 																		 fieldPeso (string) em forma de Double  */
 				
@@ -117,6 +126,7 @@ public class TelaPeso extends JFrame {
 				
 				
 				
+			}
 			}
 		});
 		
@@ -151,5 +161,20 @@ public class TelaPeso extends JFrame {
 		
 		
 		
+	}
+	
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldPeso)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
 	}
 }

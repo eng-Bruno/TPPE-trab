@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -107,8 +108,16 @@ public class TelaArea extends JFrame {
 		btnBotaoArea.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				double valor = Double.parseDouble(fieldArea.getText().toString()); /* Essa variavel serve para armazenar o valor do
-				                                                                         fieldArea (string) em forma de Double  */
+				
+				// Aqui é verificado se o conteúdo do fieldArea é uma string ou se esta vazio.
+				if (fieldArea.getText().equals("") || !isNumeric(fieldArea.getText())) {
+					
+						JOptionPane.showMessageDialog(null, "Digite um número para proseguir", null, JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else {
+				double valor = Double.parseDouble(fieldArea.getText()); /* Essa variavel serve para armazenar o valor do
+				                                                                  fieldArea (string) em forma de Double  */
 				
 				// Aqui é feita a converção de unidade de medida
 				area.converteArea(valor, comboArea1.getSelectedIndex());
@@ -119,6 +128,8 @@ public class TelaArea extends JFrame {
 				fieldResultadoArea.setVisible(true); // Torna o fieldResultadoArea visível para o usuário.
 				fieldResultadoArea.setText(area.getArea(comboArea2.getSelectedIndex()));// Exibição do resultado no fieldResultadoArea
 				
+				
+			}
 			}
 		});
 		
@@ -154,4 +165,20 @@ public class TelaArea extends JFrame {
 		
 
 	}
+	
+	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldArea)
+	 * é uma string ou não */
+	 
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
 	}
+	}
+

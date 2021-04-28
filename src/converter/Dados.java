@@ -1,5 +1,12 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Dados
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
 public class Dados {
 
 	private double bit;
@@ -10,7 +17,12 @@ public class Dados {
 	private double megaBit;
 	private double gigaBit;
 	
-	// Função usada para fazer a conversão de dados
+	/**
+	 * Este método faz todos os cálculos referentes a Dados
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 	public void converteDado(double valor, int unidadeMedida)
 	{
@@ -161,8 +173,13 @@ public class Dados {
 	}
 	
 	
-	// Este método serve para mandar as informações para o pacote view
-	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	public String getDados(int n)
 	{
 		String str = null;

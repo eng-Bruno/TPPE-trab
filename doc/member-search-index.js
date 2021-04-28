@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"view","c":"TelaTempo","l":"isNumeric(String)","u":"isNumeric(java.lang.String)"},{"p":"view","c":"TelaTempo","l":"TelaTempo()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"view","c":"TelaVelocidade","l":"isNumeric(String)","u":"isNumeric(java.lang.String)"},{"p":"view","c":"TelaVelocidade","l":"TelaVelocidade()","u":"%3Cinit%3E()"}];updateSearchResults();

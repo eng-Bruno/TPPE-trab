@@ -1,7 +1,7 @@
 package converter;
 
 /**
- * Esta classe serve para fazer as conversões de Peso
+ * Esta classe serve para fazer as conversões de Peso 
  * @author igor/Bruno
  * @version 1.0 (27/04/2021)
  *

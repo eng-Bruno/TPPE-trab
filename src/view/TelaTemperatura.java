@@ -17,6 +17,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Classe responsável por criar a tela Temperatura
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
 public class TelaTemperatura extends JFrame {
 	private JTextField fieldTemp;
 
@@ -161,8 +168,12 @@ public class TelaTemperatura extends JFrame {
 		
 	}
 
-	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldTemp)
-	 * é uma string ou não */
+	/**
+	 * Método responsável por verificar o conteúdo do JtextField
+	 * @param strNum
+	 * @return boolean, retorna verdadeiro se for digitado um número 
+	 * e falso se não for digitado um número
+	 */
 	 
 	public static boolean isNumeric(String strNum) {
 	    if (strNum == null) {

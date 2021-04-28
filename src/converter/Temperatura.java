@@ -1,5 +1,11 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Temperatura
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
 public class Temperatura {
 	private double celsius;
 	private double fahrenheit;
@@ -7,7 +13,12 @@ public class Temperatura {
 	private double rankine;
 	private double reaumur;
 	
-	// Função usada para fazer a conversão das temperaturas
+	/**
+	 * Este método faz todos os cálculos referentes a Temperatura
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 public void converteTemperatura(double valor, int unidadeMedida) {
 		
@@ -102,8 +113,13 @@ public void converteTemperatura(double valor, int unidadeMedida) {
 	}
 	
 	
-	// Este método serve para mandar as informações para o pacote view
-	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	
 	public String getTemperatura(int n)
 	{

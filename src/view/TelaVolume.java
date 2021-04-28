@@ -15,6 +15,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Classe responsável por criar a tela Volume
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
+
 public class TelaVolume extends JFrame {
 	private JTextField fieldVol;
 	private JTextField fieldResultadoVol;
@@ -152,8 +160,12 @@ public class TelaVolume extends JFrame {
 		setVisible(true);
 	}
 
-	/* Esta função serve para verificar se o conteúdo do jTextfield (fieldVol)
-	 * é uma string ou não */
+	/**
+	 * Método responsável por verificar o conteúdo do JtextField
+	 * @param strNum
+	 * @return boolean, retorna verdadeiro se for digitado um número 
+	 * e falso se não for digitado um número
+	 */
 	 
 	public static boolean isNumeric(String strNum) {
 	    if (strNum == null) {

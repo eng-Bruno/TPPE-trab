@@ -1,5 +1,11 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Tempo
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
 public class Tempo {
 	
 	private double miliSegundo;
@@ -11,7 +17,12 @@ public class Tempo {
 	private double mes;
 	private double ano;
 	
-	// Função usada para fazer as conversões
+	/**
+	 * Este método faz todos os cálculos referentes a Tempo
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 	public void converteTempo(double valor, int unidadeMedida)
 	{
@@ -182,8 +193,13 @@ public class Tempo {
 	}
 	
 	
-	// Este método serve para mandar as informações para o pacote view
-	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	
 	public String getTempo(int n)
 	{

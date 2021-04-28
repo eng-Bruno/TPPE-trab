@@ -17,6 +17,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Classe responsável por criar a tela Dados
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
 public class TelaDados extends JFrame {
 	private JTextField fieldDado;
 	private JTextField fieldResultadoDado;

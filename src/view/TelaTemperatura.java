@@ -113,7 +113,7 @@ public class TelaTemperatura extends JFrame {
 				
 				else {
 				
-				double valor = Double.parseDouble(fieldTemp.getText().toString()); /* Essa variavel serve para armazenar o valor do
+				double valor = Double.parseDouble(fieldTemp.getText()); /* Essa variavel serve para armazenar o valor do
                 																		 fieldTemp (string) em forma de Double  */
 				
 				// Aqui é feita a converção

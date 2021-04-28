@@ -15,6 +15,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Classe responsável por criar a tela principal e chamar as outras telas
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
 public class TelaPrincipal extends JFrame {
 
 	private JPanel contentPane;

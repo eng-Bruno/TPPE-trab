@@ -1,5 +1,11 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Area
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
 public class Area {
 
 	private double milimetroQuadrado;
@@ -14,7 +20,13 @@ public class Area {
 	private long dezElevado10 = 10000000000L;           // Representa o número 10 elevado a 10
 	private long dois59Elevado10 = 25900000000L;        // Representa o número 2,59 x 10 elevado a 10 
 	
-	// Função usada para fazer as conversões dos valores de área
+	
+	/**
+	 * Este método faz todos os cálculos referentes a Area
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 	public void converteArea(double valor, int unidadeMedida)
 	{
@@ -163,6 +175,13 @@ public class Area {
 	// Este método serve para mandar as informações para o pacote view
 	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
 	
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	public String getArea(int n)
 	{
 		String str = null;

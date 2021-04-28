@@ -1,5 +1,12 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Peso
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
 public class Peso {
 
 	private double miliGrama;
@@ -9,7 +16,12 @@ public class Peso {
 	private double tonelada;
 	
 	
-	// Função usada para fazer as conversões de peso
+	/**
+	 * Este método faz todos os cálculos referentes a Peso
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 public void convertePeso(double valor, int unidadeMedida) {
 		
@@ -102,8 +114,13 @@ public void convertePeso(double valor, int unidadeMedida) {
 	}
 	
 	
-	// Este método serve para mandar as informações para o pacote view
-	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	
 	public String getPeso(int n)
 	{

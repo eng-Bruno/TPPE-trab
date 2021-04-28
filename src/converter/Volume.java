@@ -1,5 +1,12 @@
 package converter;
 
+/**
+ * Esta classe serve para fazer as conversões de Volume
+ * @author igor/Bruno
+ * @version 1.0 (27/04/2021)
+ *
+ */
+
 public class Volume {
 	
 	private double miliLitros;
@@ -10,7 +17,12 @@ public class Volume {
 	private double metrosCubicos;
 	private double pesCubicos;
 	
-	// Função usada para converter os valores de volume 
+	/**
+	 * Este método faz todos os cálculos referentes a Volume
+	 * @param valor
+	 * @param unidadeMedida
+	 * @return void, não retorna nada
+	 */
 	
 	public void converteVol(double valor, int unidadeMedida)
 	{
@@ -150,8 +162,13 @@ public class Volume {
 	}
 	
 	
-	// Este método serve para mandar as informações para o pacote view
-	// Ele transforma o resultado da conta em uma string e usa o switch para alternar entre as opçoes escolhidas
+	/**
+	 * Este método serve para mandar as informações para o pacote view
+	 * Ele transforma o resultado da conta em uma string e usa o
+	 * switch para alternar entre as opçoes escolhidas
+	 * @param n
+	 * @return string, retorna o valor da conta em forma de string
+	 */
 	
 	public String getVol(int n)
 	{

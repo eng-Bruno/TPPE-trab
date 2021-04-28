@@ -176,7 +176,7 @@ public void setMilhaHora(double milhaHora) {
  * Ele transforma o resultado da conta em uma string e usa o
  * switch para alternar entre as opçoes escolhidas
  * @param n
- * @return string, retorna o valor da conta em forma de string
+ * @return string, retorna o valor da conta em forma de string 
  */
 
 public String getVelocidade(int n)

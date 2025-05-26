@@ -17,3 +17,4 @@ Por meio do diagrama de classes, é possível entender como os elementos do sist
 |    Data    | Versão |      Descrição       |     Autor      |
 | :--------: | :----: | :------------------: | :------------: |
 | 08/05/2025 |  0.1   | Criação do documento | Bruno Oliveira |
+| 26/05/2025 |  0.2   | Adicionando introdução | Bruno Oliveira |

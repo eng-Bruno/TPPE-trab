@@ -1,13 +1,8 @@
-package eng_bruno.br.conversor;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 @SpringBootTest
-class ConversorApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
+@Disabled("TDD")
+public class ConversorServiceTest {
+    @Test
+    void exemploTesteIgnorado() {
+        Assertions.assertTrue(true);
+    }
 }

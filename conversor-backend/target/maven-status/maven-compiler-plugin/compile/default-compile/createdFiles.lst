@@ -1,0 +1,5 @@
+eng_bruno\br\conversor\ConversorApplication.class
+eng_bruno\br\conversor\controller\ConversorController.class
+eng_bruno\br\conversor\converter\Conversor.class
+eng_bruno\br\conversor\dto\ConversorRequest.class
+eng_bruno\br\conversor\dto\ConversorResponse.class
